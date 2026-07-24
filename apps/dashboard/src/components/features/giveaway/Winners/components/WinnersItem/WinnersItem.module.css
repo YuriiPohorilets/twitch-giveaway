@@ -1,0 +1,45 @@
+.winner {
+  padding-block: 1.25rem;
+  padding-inline: 1rem;
+  inline-size: 100%;
+
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+
+  border-radius: var(--border_md, 1rem);
+  background-color: var(--color_background, #ebecf0);
+  box-shadow: var(--shadow_outer, -5px -5px 20px #ffffff, 5px 5px 20px #babecc);
+}
+
+.place {
+  inline-size: 3rem;
+  block-size: 3rem;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  font-size: 2rem;
+  text-align: center;
+  font-weight: 700;
+}
+
+.info {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 2rem;
+  flex: 1 0 0;
+}
+
+.username {
+  flex: 1 0 auto;
+}
+
+.error {
+  font-size: 0.75rem;
+  color: var(--color_error, rgba(179, 38, 30, 1));
+}

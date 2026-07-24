@@ -1,0 +1,10 @@
+.container {
+  margin-inline: auto;
+  padding-inline: 1rem;
+  inline-size: 100%;
+  max-inline-size: calc(120rem - 2rem);
+}
+
+.container.fullHeight {
+  block-size: 100%;
+}

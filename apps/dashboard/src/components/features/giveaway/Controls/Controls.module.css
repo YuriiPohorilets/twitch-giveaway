@@ -1,0 +1,28 @@
+.controls {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2rem;
+
+  inline-size: 100%;
+}
+
+.block {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+
+  inline-size: 100%;
+}
+
+.row {
+  display: flex;
+  gap: 0.5rem;
+
+  inline-size: 100%;
+}
+
+.button {
+  flex: 1 0 0;
+}

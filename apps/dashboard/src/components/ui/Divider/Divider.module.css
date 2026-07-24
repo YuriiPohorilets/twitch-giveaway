@@ -1,0 +1,8 @@
+.divider {
+  inline-size: 100%;
+  block-size: 0.25rem;
+
+  border-radius: 100rem;
+  background-color: var(--color_background, #ebecf0);
+  box-shadow: var(--shadow_inner, inset 2px 2px 5px #babecc, inset -5px -5px 10px #ffffff);
+}

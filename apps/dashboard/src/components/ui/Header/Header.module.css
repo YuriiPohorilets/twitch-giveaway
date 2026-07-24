@@ -1,0 +1,26 @@
+.header {
+  padding-block: 0.875rem;
+  inline-size: 100%;
+}
+
+.wrapper {
+  display: grid;
+  grid-template-columns: 1fr auto 1fr;
+  gap: 2rem;
+}
+
+.logo {
+  grid-column: 2;
+}
+
+.profile {
+  display: inline-flex;
+  justify-content: flex-end;
+  align-items: center;
+  gap: 1rem;
+}
+
+.logout {
+  grid-column: 3;
+  justify-self: end;
+}

@@ -1,0 +1,29 @@
+.logo {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+}
+
+.icon {
+  inline-size: 2.25rem;
+  block-size: 2.25rem;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.icon > svg {
+  inline-size: 100%;
+  block-size: 100%;
+}
+
+.label {
+  color: var(--color_accent, #6441a5);
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.06rem;
+
+  text-shadow: var(--shadow_text, 1px 1px 0px #ffffff);
+}

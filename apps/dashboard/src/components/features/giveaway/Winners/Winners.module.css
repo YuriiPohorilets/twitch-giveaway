@@ -1,0 +1,23 @@
+.winners {
+  inline-size: 100%;
+  block-size: 100%;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1.5rem;
+}
+
+.controls {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 1.5rem;
+
+  inline-size: 100%;
+}
+
+.copy {
+  align-self: flex-end;
+  max-inline-size: 17.5rem;
+}

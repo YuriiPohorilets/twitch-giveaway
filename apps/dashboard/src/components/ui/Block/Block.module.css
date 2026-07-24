@@ -1,0 +1,31 @@
+.block {
+  position: relative;
+
+  padding-inline: 1.5rem;
+  padding-block: 1.5rem;
+
+  background-color: var(--color_background, #ebecf0);
+
+  /* border: 1px solid; */
+  /* border-color: rgba(255, 255, 255, 0.6); */
+}
+
+.block.border-sm {
+  border-radius: var(--border_sm, 0.5rem);
+}
+
+.block.border-md {
+  border-radius: var(--border_md, 1rem);
+}
+
+.block.border-lg {
+  border-radius: var(--border_lg, 2rem);
+}
+
+.block.inner {
+  box-shadow: var(--shadow_inner, inset 2px 2px 5px #babecc, inset -5px -5px 10px #ffffff);
+}
+
+.block.outer {
+  box-shadow: var(--shadow_outer, -5px -5px 20px #ffffff, 5px 5px 20px #babecc);
+}

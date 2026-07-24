@@ -1,0 +1,52 @@
+.dashboard {
+  display: flex;
+  align-items: stretch;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 1.5rem;
+
+  inline-size: 100%;
+  block-size: 100%;
+}
+
+.blockStart {
+  flex: 1 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+
+  max-inline-size: 26.25rem;
+}
+
+.blockCenter {
+  flex: 1 0 auto;
+}
+
+.blockEnd {
+  max-inline-size: 26.25rem;
+
+  flex: 1 0 auto;
+}
+
+.settings,
+.participants,
+.winners,
+.instructions {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1.5rem;
+}
+
+.winners,
+.instructions {
+  block-size: 100%;
+}
+
+.participants {
+  flex: 1 0 auto;
+}
+
+.settings {
+  flex: 0 0 auto;
+}

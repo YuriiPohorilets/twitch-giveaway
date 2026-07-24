@@ -1,0 +1,18 @@
+.footer {
+  padding-block: 0.875rem;
+  inline-size: 100%;
+}
+
+.wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 2rem;
+}
+
+.label {
+  color: var(--color_secondary, #61677c);
+  font-size: 0.875rem;
+  line-height: 1;
+  text-shadow: var(--shadow_text, 1px 1px 0px #ffffff);
+}

@@ -1,0 +1,15 @@
+http://localhost {
+	redir /api /api/
+
+	handle_path /api/* {
+		reverse_proxy server:3000
+	}
+
+	handle /ws {
+		reverse_proxy server:3000
+	}
+
+	handle {
+		reverse_proxy dashboard:3001
+	}
+}

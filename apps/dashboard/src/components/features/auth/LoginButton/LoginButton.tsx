@@ -11,7 +11,6 @@ export function LoginButton() {
 
   const handleLogin = () => {
     setIsLoading(true);
-    localStorage.removeItem("keyword");
 
     const timeout = setTimeout(() => {
       setIsLoading(false);

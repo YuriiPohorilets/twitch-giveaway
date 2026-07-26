@@ -6,7 +6,7 @@
   gap: 1.5rem;
 
   inline-size: 100%;
-  block-size: 100%;
+  /* block-size: 100%; */
 }
 
 .blockStart {
@@ -16,14 +16,17 @@
   gap: 1.5rem;
 
   max-inline-size: 26.25rem;
+  block-size: 100%;
 }
 
 .blockCenter {
   flex: 1 0 auto;
+  block-size: 100%;
 }
 
 .blockEnd {
   max-inline-size: 26.25rem;
+  block-size: 100%;
 
   flex: 1 0 auto;
 }
@@ -43,10 +46,13 @@
   block-size: 100%;
 }
 
-.participants {
-  flex: 1 0 auto;
-}
-
 .settings {
   flex: 0 0 auto;
+}
+
+.participants {
+  flex: 1 1 auto;
+  min-block-size: 0;
+  block-size: 30rem;
+  max-block-size: 36rem;
 }

@@ -1,0 +1,17 @@
+{
+  "private": true,
+  "workspaces": [
+    "apps/dashboard",
+    "apps/server"
+  ],
+  "scripts": {
+    "dev": "concurrently --kill-others-on-fail --names SERVER,DASHBOARD \"npm --prefix apps/server run dev\" \"npm --prefix apps/dashboard run dev\"",
+    "build": "npm --prefix apps/server run build && npm --prefix apps/dashboard run build",
+    "docker:up": "docker compose up --build",
+    "docker:down": "docker compose down",
+    "docker:logs": "docker compose logs -f"
+  },
+  "devDependencies": {
+    "concurrently": "^9.2.1"
+  }
+}

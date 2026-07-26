@@ -1,13 +1,25 @@
 .git
 .gitignore
 
+node_modules
 **/node_modules
-**/.next
-**/dist
-**/coverage
-**/.turbo
 
-**/.env
-**/.env.*
+.next
+**/.next
+
+dist
+**/dist
+
+coverage
+**/coverage
+
+.turbo
+
+.env
+.env.*
+!.env.example
+
+*.log
+*.tsbuildinfo
 
 .DS_Store

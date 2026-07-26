@@ -1,0 +1,148 @@
+.stage {
+  position: relative;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  padding: 48px 24px;
+  min-block-size: 420px;
+  block-size: 100%;
+
+  background: radial-gradient(circle at 50% 30%, #1c1e2b 0%, #101119 70%);
+  border-radius: 16px;
+
+  overflow: hidden;
+}
+
+.field {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+}
+
+.piece {
+  position: absolute;
+  top: -5%;
+  border-radius: 2px;
+  will-change: transform, opacity;
+  animation-name: fall, spin;
+  animation-timing-function: cubic-bezier(0.4, 0.1, 0.6, 0.9), linear;
+  animation-iteration-count: 1;
+  animation-fill-mode: forwards;
+  opacity: 0;
+}
+
+.dot {
+  border-radius: 50%;
+}
+
+.strip {
+  border-radius: 2px;
+}
+
+.curl {
+  background: transparent !important;
+  border: 2px solid;
+  border-radius: 60% 40% 55% 45% / 45% 55% 40% 60%;
+}
+
+@keyframes fall {
+  0% {
+    transform: translate(0, 0) rotate(0deg);
+    opacity: 1;
+  }
+  15% {
+    opacity: 1;
+  }
+  50% {
+    transform: translate(var(--drift), 55vh) rotate(calc(var(--spin) * 180deg));
+  }
+  100% {
+    transform: translate(calc(var(--drift) * -1), 115vh) rotate(calc(var(--spin) * 400deg));
+    opacity: 0.9;
+  }
+}
+
+@keyframes spin {
+  0% {
+    filter: brightness(1);
+  }
+  50% {
+    filter: brightness(1.25);
+  }
+  100% {
+    filter: brightness(1);
+  }
+}
+
+.content {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+  text-align: center;
+}
+
+.message {
+  margin: 0;
+  font-size: clamp(28px, 6vw, 48px);
+  font-weight: 800;
+  letter-spacing: -0.02em;
+  color: #fff;
+  background: linear-gradient(90deg, #ffd93d, #ff6b6b 40%, #45aaff 75%, #9b5de5);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: pop 0.6s cubic-bezier(0.34, 1.56, 0.64, 1) both;
+}
+
+@keyframes pop {
+  0% {
+    transform: scale(0.6) translateY(12px);
+    opacity: 0;
+  }
+  70% {
+    transform: scale(1.06) translateY(0);
+    opacity: 1;
+  }
+  100% {
+    transform: scale(1) translateY(0);
+  }
+}
+
+.replayButton {
+  padding: 10px 22px;
+  font-size: 15px;
+  font-weight: 600;
+  color: #101119;
+  background: #ffd93d;
+  border: none;
+  border-radius: 999px;
+  cursor: pointer;
+  transition:
+    transform 0.15s ease,
+    background 0.15s ease;
+}
+
+.replayButton:hover {
+  background: #ffe066;
+  transform: translateY(-1px);
+}
+
+.replayButton:focus-visible {
+  outline: 3px solid #45aaff;
+  outline-offset: 2px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .piece {
+    animation: none;
+    opacity: 0;
+  }
+  .message {
+    animation: none;
+  }
+}

@@ -21,3 +21,18 @@
   align-self: flex-end;
   max-inline-size: 17.5rem;
 }
+
+.confetti {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  z-index: 2;
+
+  transform: translateX(-50%);
+
+  inline-size: 100%;
+  block-size: 100%;
+
+  user-select: none;
+  pointer-events: none;
+}

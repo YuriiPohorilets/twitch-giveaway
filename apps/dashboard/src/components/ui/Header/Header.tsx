@@ -12,6 +12,7 @@ export function Header() {
 
   const handleLogout = async () => {
     await logout();
+    localStorage.removeItem("keyword");
     window.location.href = "/login";
   };
 

@@ -1,31 +1,30 @@
 .wrapper {
+  flex: 1 1 auto;
+
   padding-inline: 1rem;
   padding-block: 1rem;
+
   inline-size: 100%;
   block-size: 100%;
+  min-block-size: 0;
 
   border-radius: var(--border_md, 1rem);
   box-shadow: var(--shadow_inner, inset 2px 2px 5px #babecc, inset -5px -5px 10px #ffffff);
 
-  overflow: hidden;
+  overflow-y: auto;
+  overflow-x: hidden;
 }
 
 .list {
   position: relative;
 
-  display: flex;
-  flex-direction: column;
-
-  overflow-y: auto;
+  inline-size: 100%;
 }
 
 .item {
   position: absolute;
-  top: 0;
-  left: 0;
-  z-index: 1;
+  inset-block-start: 0;
+  inset-inline-start: 0;
 
   inline-size: 100%;
-
-  transition: transform var(--transition_md, 250ms) var(--easing_general, ease-in-out);
 }

@@ -6,6 +6,7 @@ import { copyText } from "@/utils";
 import { Button } from "@/components/ui";
 import { NoWinners, WinnersList } from "./components";
 import styles from "./Winners.module.css";
+import Confetti from "@/components/ui/Confetti/Confetti";
 
 interface WinnersProps {
   winners: Participant[];
@@ -54,6 +55,10 @@ export function Winners({ winners }: WinnersProps) {
         <NoWinners />
       ) : (
         <>
+          <div className={styles.confetti}>
+            <Confetti count={100} />
+          </div>
+
           <div className={styles.controls}>
             <Button
               label={copyLabel}

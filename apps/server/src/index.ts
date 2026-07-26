@@ -3,6 +3,7 @@ import { env } from "./core/config/index.js";
 import { createApp } from "./server/app.js";
 import { registerRoutes } from "./server/routes.js";
 import { registerWebSocketRoutes } from "./core/websocket/routes.js";
+import { registerDevRoutes } from "./dev/routes.js";
 
 async function bootstrap() {
   const app = await createApp();
@@ -14,6 +15,10 @@ async function bootstrap() {
   await registerRoutes(app, container);
 
   await registerWebSocketRoutes(app, container);
+
+  if (process.env.NODE_ENV !== "production") {
+    await registerDevRoutes(app, container);
+  }
 
   if (env.twitch.bot.accessToken && env.twitch.bot.refreshToken) {
     await container.chat.twitch.connect();

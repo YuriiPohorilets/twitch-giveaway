@@ -6,10 +6,7 @@ import { registerAuthRoutes } from "../auth/routes.js";
 import { registerGiveawayRoutes } from "../features/giveaway/routes.js";
 
 export async function registerRoutes(app: FastifyInstance, container: Container) {
-  app.get("/", async () => ({
-    name: "Giveaway API",
-    status: "ok",
-  }));
+  app.get("/", async () => ({ name: "Giveaway API", status: "ok" }));
 
   await registerAuthRoutes(app, container.auth.controller, container.auth.middleware);
 

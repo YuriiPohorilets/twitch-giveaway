@@ -117,7 +117,7 @@ export function Controls({ giveaway }: ControlsProps) {
         />
 
         <Button
-          label="Скинути"
+          label="Почати заново"
           disabled={isIdle}
           variant="text"
           color="primary"

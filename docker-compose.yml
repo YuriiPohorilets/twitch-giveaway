@@ -1,7 +1,8 @@
 services:
   server:
     build:
-      context: ./apps/server
+      context: .
+      dockerfile: apps/server/Dockerfile
     restart: unless-stopped
     env_file:
       - ./.env
@@ -10,7 +11,8 @@ services:
 
   dashboard:
     build:
-      context: ./apps/dashboard
+      context: .
+      dockerfile: apps/dashboard/Dockerfile
       args:
         NEXT_PUBLIC_API_URL: /api
     restart: unless-stopped

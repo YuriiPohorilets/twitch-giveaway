@@ -1,24 +1,69 @@
-# macOS
+# =========================
+# OS
+# =========================
+
 .DS_Store
 
+# =========================
 # IDE
+# =========================
+
 .vscode/
 .idea/
 
+# =========================
+# Dependencies
+# =========================
+
+node_modules/
+**/node_modules/
+
+# =========================
+# Build output
+# =========================
+
+.next/
+**/.next/
+
+dist/
+**/dist/
+
+.turbo/
+
+coverage/
+**/coverage/
+
+# =========================
+# TypeScript
+# =========================
+
+*.tsbuildinfo
+
+# =========================
 # Logs
+# =========================
+
 *.log
 npm-debug.log*
+yarn-debug.log*
+pnpm-debug.log*
 
+# =========================
 # Environment
+# =========================
+
 .env
 .env.*
 !.env.example
 
-# Turborepo
-.turbo/
+# =========================
+# Docker
+# =========================
 
-# Coverage
-coverage/
+docker-compose.override.yml
 
+# =========================
 # GitHub
+# =========================
+
 .github/*.local

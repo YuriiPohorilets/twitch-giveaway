@@ -112,18 +112,13 @@
 }
 
 body {
+  block-size: 100%;
+
   font-family:
     -apple-system, BlinkMacSystemFont, "Segoe UI", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans",
     "Droid Sans", "Helvetica Neue", sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-
-  display: grid;
-  grid-template-rows: auto 1fr auto;
-  gap: 0.5rem;
-
-  min-block-size: 100svh;
-
   text-rendering: optimizeSpeed;
   color: var(--color_primary, #313131);
   font-size: 1.125rem;
@@ -131,6 +126,15 @@ body {
   font-weight: 400;
 
   background-color: var(--color_background, #ebecf0);
+
   scroll-behavior: smooth;
   overscroll-behavior-y: none;
+}
+
+.layout {
+  display: grid;
+  grid-template-rows: auto 1fr auto;
+  gap: 0.5rem;
+
+  min-block-size: 100vh;
 }

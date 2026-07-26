@@ -14,7 +14,6 @@ FROM node:24-alpine AS builder
 WORKDIR /app
 
 COPY --from=dependencies /app/node_modules ./node_modules
-COPY --from=dependencies /app/apps/dashboard/node_modules ./apps/dashboard/node_modules
 
 COPY package.json package-lock.json ./
 COPY apps/dashboard ./apps/dashboard

@@ -14,7 +14,6 @@ FROM node:24-alpine AS builder
 WORKDIR /app
 
 COPY --from=dependencies /app/node_modules ./node_modules
-COPY --from=dependencies /app/apps/server/node_modules ./apps/server/node_modules
 
 COPY package.json package-lock.json ./
 COPY apps/server/package.json ./apps/server/package.json
@@ -34,11 +33,9 @@ ENV PORT=3000
 RUN addgroup --system --gid 1001 nodejs \
   && adduser --system --uid 1001 giveaway
 
-COPY --from=builder --chown=giveaway:nodejs /app/package.json /app/package-lock.json /app/
 COPY --from=builder --chown=giveaway:nodejs /app/apps/server/package.json ./
 COPY --from=builder --chown=giveaway:nodejs /app/apps/server/dist ./dist
 COPY --from=builder --chown=giveaway:nodejs /app/node_modules /app/node_modules
-COPY --from=builder --chown=giveaway:nodejs /app/apps/server/node_modules ./node_modules
 
 USER giveaway
 
